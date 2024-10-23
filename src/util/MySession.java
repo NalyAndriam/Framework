@@ -22,6 +22,10 @@ public class MySession {
         session.removeAttribute(key);
     }
 
+    public void clear() {
+        session.invalidate();
+    }
+
     public HttpSession getSession() {
         return session;
     }
