@@ -1,4 +1,4 @@
-package utils;
+package utils.conversion;
 
 
 public abstract class TypeConverter {

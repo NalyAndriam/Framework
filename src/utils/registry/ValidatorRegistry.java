@@ -1,4 +1,4 @@
-package utils.validation;
+package utils.registry;
 
 import java.lang.annotation.Annotation;
 import java.util.HashMap;

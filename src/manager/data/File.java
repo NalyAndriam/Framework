@@ -1,9 +1,9 @@
-package util;
+package manager.data;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import utils.FileUtils;
+import utils.io.FileUtils;
 
 public class File {
     String fileName;

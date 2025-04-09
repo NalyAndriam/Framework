@@ -1,4 +1,4 @@
-package utils;
+package utils.string;
 
 public class TagBuilder {
     private TagBuilder() {
