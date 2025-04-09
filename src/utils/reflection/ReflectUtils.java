@@ -1,4 +1,4 @@
-package utils;
+package utils.reflection;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -10,8 +10,8 @@ import java.util.List;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
+import manager.data.MySession;
 import annotation.ReqParam;
-import utils.MySession;
 import exception.AnnotationNotPresentException;
 import exception.InvalidRequestException;
 import exception.ModelValidationException;

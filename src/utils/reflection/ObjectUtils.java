@@ -1,4 +1,4 @@
-package utils;
+package utils.reflection;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -13,9 +13,11 @@ import java.util.List;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
+import manager.data.File;
+import manager.data.MySession;
 import annotation.ReqParam;
-import util.File;
 import exception.ModelValidationException;
+import utils.io.FileUtils;
 import utils.validation.Validator;
 
 public class ObjectUtils {

@@ -1,4 +1,4 @@
-package utils;
+package utils.io;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.io.InputStream;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.Part;
-import util.File;
+import manager.data.File;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
