@@ -75,6 +75,36 @@ public class MainProcess {
         }
     }
 
+    private static boolean hasRequiredRole(String userRole, String[] requiredRoles) {
+        if (userRole == null || requiredRoles == null || requiredRoles.length == 0) {
+            return false;
+        }
+
+        for (String required : requiredRoles) {
+            if (required.equalsIgnoreCase(userRole)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static String getUserRoleFromSession(HttpServletRequest request)
+        throws UnauthorizedAccessException {
+        HttpSession session = request.getSession(false);
+        if (session == null) {
+            throw new UnauthorizedAccessException("No active session found");
+        }
+
+       
+        Object role = session.getAttribute(defaultRoleAttribute);
+        if (role == null) {
+            throw new UnauthorizedAccessException("No role defined in session");
+        }
+
+        return role.toString();
+    }
+
+
     private static String handleRest(Object methodObject, HttpServletResponse response) {
         Gson gson = new Gson();
         String json = null;
